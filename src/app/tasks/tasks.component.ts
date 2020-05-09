@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Task } from '../task'
 
 @Component({
   selector: 'app-tasks',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
+
+  tasks: Task[];
 
   constructor() { }
 
