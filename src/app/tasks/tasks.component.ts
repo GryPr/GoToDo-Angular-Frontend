@@ -19,8 +19,9 @@ export class TasksComponent implements OnInit {
   }
 
   onChange(id: number, isChecked: boolean) {
-    let currentTask = this.tasks.find(x => x.ID == id);
+    var currentTask : Task = this.tasks.find(x => x.ID == id);
     currentTask.completion = isChecked;
+    console.log(currentTask.completion);
     this.RestAPIService.updateTask(id, currentTask);
   }
 

@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'task-create', component: TaskCreateComponent},
   { path: 'task-edit', component: TaskEditComponent},
-  { path:'', redirectTo: '/dashboard', pathMatch: 'full'},
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
 ];
 
 @NgModule({
