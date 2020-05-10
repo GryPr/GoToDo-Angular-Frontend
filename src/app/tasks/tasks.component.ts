@@ -22,7 +22,8 @@ export class TasksComponent implements OnInit {
     var currentTask : Task = this.tasks.find(x => x.ID == id);
     currentTask.completion = isChecked;
     console.log(currentTask.completion);
-    this.RestAPIService.updateTask(id, currentTask);
+    this.RestAPIService.updateTask(id, currentTask).subscribe(t => {currentTask = t});
+    
   }
 
   getTasks(): void {

@@ -38,7 +38,8 @@ export class RestApiService {
   }
 
   updateTask(id, task): Observable<Task> {
-    return this.http.post<Task>(this.apiURL + '/todo/' + id, JSON.stringify(task), this.httpOptions)
+    console.log("ID " + id);
+    return this.http.put<Task>(this.apiURL + '/todo/' + id, task, this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -62,6 +63,7 @@ export class RestApiService {
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
     window.alert(errorMessage)
+    console.log(errorMessage)
     return throwError(errorMessage)
     }
 }
