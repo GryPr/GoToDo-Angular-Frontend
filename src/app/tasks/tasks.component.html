@@ -1,7 +1,7 @@
 <h2>TASKS</h2>
-<ul class='TASKS'>
+<ul class='tasks'>
     <li *ngFor="let task of tasks">
-        <span class="badge">{{task.id}}</span> - {{task.description}}
-        <input type="checkbox" (change)="onChange(task.id, $event.target.checked)" [checked]="task.completion" />
+        <span class="badge">{{task.ID}}</span> {{task.description}}
+        <input type="checkbox" (change)="onChange(task.ID, $event.target.checked)" [checked]="task.completion" />
     </li>
 </ul>

@@ -21,8 +21,8 @@ export class RestApiService {
     )
   }
 
-  getTasks(): Observable<Task> {
-    return this.http.get<Task>(this.apiURL + '/todo')
+  getTasks(): Observable<Task[]> {
+    return this.http.get<Task[]>(this.apiURL + '/todo')
     .pipe(
       retry(1),
       catchError(this.handleError)

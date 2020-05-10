@@ -8,7 +8,7 @@ import { HttpClientModule }    from '@angular/common/http';
 import { TaskCreateComponent } from './task-create/task-create.component';
 import { TaskEditComponent } from './task-edit/task-edit.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [

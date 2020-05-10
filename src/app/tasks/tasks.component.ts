@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../task'
-import { TASKS } from '../test-tasks'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
-
+import { RestApiService } from '../rest-api.service'
 
 @Component({
   selector: 'app-tasks',
@@ -11,14 +10,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 })
 export class TasksComponent implements OnInit {
 
-  tasks = TASKS;
+  tasks : Task[];
 
-  constructor() { }
+  constructor(private RestAPIService: RestApiService) { }
 
   ngOnInit(): void {
+    this.getTasks();
   }
 
   onChange(id: number, isChecked: boolean) {
-    this.tasks.find(x => x.id == id).completion = isChecked;
+    let currentTask = this.tasks.find(x => x.ID == id);
+    currentTask.completion = isChecked;
+    this.RestAPIService.updateTask(id, currentTask);
+  }
+
+  getTasks(): void {
+    this.RestAPIService.getTasks().subscribe(t => {this.tasks = t});
   }
 }
