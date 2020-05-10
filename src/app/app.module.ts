@@ -9,6 +9,7 @@ import { TaskCreateComponent } from './task-create/task-create.component';
 import { TaskEditComponent } from './task-edit/task-edit.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
+import { TaskOptionBarComponent } from './task-option-bar/task-option-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     TasksComponent,
     TaskCreateComponent,
     TaskEditComponent,
-    DashboardComponent
+    DashboardComponent,
+    TaskOptionBarComponent
   ],
   imports: [
     BrowserModule,
