@@ -7,6 +7,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { TaskCreateComponent } from './task-create/task-create.component';
 import { TaskEditComponent } from './task-edit/task-edit.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { TaskEditComponent } from './task-edit/task-edit.component';
     AppComponent,
     TasksComponent,
     TaskCreateComponent,
-    TaskEditComponent
+    TaskEditComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
