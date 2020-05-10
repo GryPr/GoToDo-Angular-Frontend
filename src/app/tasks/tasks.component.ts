@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../task'
+import { TASKS } from '../test-tasks'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+
 
 @Component({
   selector: 'app-tasks',
@@ -8,11 +11,14 @@ import { Task } from '../task'
 })
 export class TasksComponent implements OnInit {
 
-  tasks: Task[];
+  tasks = TASKS;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onChange(id: number, isChecked: boolean) {
+    this.tasks.find(x => x.id == id).completion = isChecked;
+  }
 }
