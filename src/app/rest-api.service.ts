@@ -46,7 +46,8 @@ export class RestApiService {
     )
   }
 
-  deleteTask(id) {
+  deleteTask(id){
+    console.log("ID " + id);
     return this.http.delete(this.apiURL + '/todo/' + id, this.httpOptions)
     .pipe(
       retry(1),
