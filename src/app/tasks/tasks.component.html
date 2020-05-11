@@ -15,7 +15,7 @@
                     <mat-button-toggle value="false" (change)="onChange(task.ID, false)">Incomplete</mat-button-toggle>
                 </mat-button-toggle-group>
                 <span class=flex></span>         
-                <button mat-icon-button color="primary" aria-label="Add Task" matTooltip="Add a task">
+                <button mat-icon-button color="primary" aria-label="Add Task" matTooltip="Add a task" routerLink="/task-edit/{{task.ID}}">
                     <mat-icon>create</mat-icon>
                 </button>       
             </mat-card-actions>
