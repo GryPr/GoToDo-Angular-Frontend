@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../task'
+import { TaskOptionBarComponent } from '../task-option-bar/task-option-bar.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { RestApiService } from '../rest-api.service'
 
