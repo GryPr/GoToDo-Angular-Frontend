@@ -3,7 +3,9 @@
     padding: 0.5;
 
 }
-
+.flex {
+    flex: 1 1 auto;
+}
 .tasks {
     margin: 0 0 2em 0;
     list-style-type: none;
