@@ -3,6 +3,11 @@ import { Task } from '../task'
 import { TaskOptionBarComponent } from '../task-option-bar/task-option-bar.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { RestApiService } from '../rest-api.service'
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 
 @Component({
   selector: 'app-tasks',

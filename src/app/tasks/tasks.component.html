@@ -1,7 +1,19 @@
 <h2>TASKS</h2>
 <ul class='tasks'>
     <li *ngFor="let task of tasks">
-        <span class="badge">{{task.ID}}</span> {{task.description}}
-        <input type="checkbox" (change)="onChange(task.ID, $event.target.checked)" [checked]="task.completion" />
+        <mat-card>
+            <mat-card-title>
+                Task {{task.ID}}
+            </mat-card-title>
+            <mat-card-content>
+                <div mat-line>{{task.description}}</div>
+            </mat-card-content>
+            <mat-card-actions>
+                <mat-button-toggle-group value={{task.completion}}>
+                    <mat-button-toggle value="true" (change)="onChange(task.ID, true)">Complete</mat-button-toggle>
+                    <mat-button-toggle value="false" (change)="onChange(task.ID, false)">Incomplete</mat-button-toggle>
+                </mat-button-toggle-group>
+            </mat-card-actions>
+        </mat-card>
     </li>
 </ul>

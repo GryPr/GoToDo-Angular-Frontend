@@ -11,6 +11,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { TaskOptionBarComponent } from './task-option-bar/task-option-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +32,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCheckboxModule,
+    MatSliderModule,
+    MatListModule,
+    MatCardModule,
+    MatButtonToggleModule,
+  ],
+  exports: [
+    MatCheckboxModule,
+    MatSliderModule,
+    MatListModule,
+    MatCardModule,
+    MatButtonToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
