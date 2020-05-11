@@ -16,6 +16,11 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 
@@ -38,6 +43,11 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatListModule,
     MatCardModule,
     MatButtonToggleModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTooltipModule,
   ],
   exports: [
     MatCheckboxModule,
@@ -45,6 +55,11 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatListModule,
     MatCardModule,
     MatButtonToggleModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,16 @@
+.h2 {
+    margin: 0.5;
+    padding: 0.5;
+
+}
+
 .tasks {
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
     width: auto;
+    padding: 0.5;
+    
   }
   .tasks li {
     position: relative;

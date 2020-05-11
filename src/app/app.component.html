@@ -1,2 +1,9 @@
-<h1>{{title}}</h1>
+<mat-toolbar>
+    <h1>{{title}}</h1>
+    <span class="fill-space"></span>
+    <button mat-icon-button color="primary" aria-label="Add Task" matTooltip="Add a task">
+        <mat-icon>add_circle</mat-icon>
+    </button>
+
+</mat-toolbar>
 <router-outlet></router-outlet>
