@@ -1,6 +1,9 @@
 <mat-toolbar>
-    <h1>{{title}}</h1>
+    <h1 routerLink="/dashboard">{{title}}</h1>
     <span class="fill-space"></span>
+    <button mat-icon-button color="primary" aria-label="Task List" matTooltip="Task List" routerLink="/dashboard">
+        <mat-icon>library_books</mat-icon>
+    </button>
     <button mat-icon-button color="primary" aria-label="Add Task" matTooltip="Add a task" routerLink="/task-create">
         <mat-icon>add_circle</mat-icon>
     </button>

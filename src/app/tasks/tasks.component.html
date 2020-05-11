@@ -11,8 +11,8 @@
             </mat-card-content>
             <mat-card-actions align="end">
                 <mat-button-toggle-group value={{task.completion}}>
-                    <mat-button-toggle value="true" (change)="onChange(task.ID, true)">Complete</mat-button-toggle>
-                    <mat-button-toggle value="false" (change)="onChange(task.ID, false)">Incomplete</mat-button-toggle>
+                    <mat-button-toggle value="true" (change)="TaskService.onCompletionChange(true, task)">Complete</mat-button-toggle>
+                    <mat-button-toggle value="false" (change)="TaskService.onCompletionChange(false, task)">Incomplete</mat-button-toggle>
                 </mat-button-toggle-group>
                 <span class=flex></span>         
                 <button mat-icon-button color="primary" aria-label="Add Task" matTooltip="Add a task" routerLink="/task-edit/{{task.ID}}">

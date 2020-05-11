@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../task'
 import { RestApiService } from '../rest-api.service'
+import { TaskService } from '../task.service'
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
@@ -10,21 +11,10 @@ export class TasksComponent implements OnInit {
 
   tasks : Task[];
 
-  constructor(private RestAPIService: RestApiService) { }
+  constructor(private RestAPIService: RestApiService, public TaskService: TaskService) { }
 
   ngOnInit(): void {
-    this.getTasks();
+    this.TaskService.getTasks().subscribe(t => {this.tasks = t});
   }
 
-  onChange(id: number, isChecked: boolean) {
-    var currentTask : Task = this.tasks.find(x => x.ID == id);
-    currentTask.completion = isChecked;
-    console.log(currentTask.completion);
-    this.RestAPIService.updateTask(id, currentTask).subscribe(t => {currentTask = t});
-    
-  }
-
-  getTasks(): void {
-    this.RestAPIService.getTasks().subscribe(t => {this.tasks = t});
-  }
 }
