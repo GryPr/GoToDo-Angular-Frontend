@@ -5,16 +5,13 @@
     width: auto;
   }
   .tasks li {
-    cursor: pointer;
     position: relative;
     left: 0;
-    margin: .5em;
     padding: .3em 0;
     border-radius: 4px;
   }
   .tasks li:hover {
     color: #607D8B;
-    left: .1em;
   }
   .tasks li.selected {
     background-color: #CFD8DC;
