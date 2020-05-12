@@ -8,7 +8,7 @@ import { HttpClientModule }    from '@angular/common/http';
 import { TaskCreateComponent } from './task-create/task-create.component';
 import { TaskEditComponent } from './task-edit/task-edit.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TaskOptionBarComponent } from './task-option-bar/task-option-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -51,6 +51,7 @@ import {MatInputModule} from '@angular/material/input';
     MatTooltipModule,
     MatFormFieldModule,
     MatInputModule,
+    ReactiveFormsModule,
   ],
   exports: [
     MatCheckboxModule,

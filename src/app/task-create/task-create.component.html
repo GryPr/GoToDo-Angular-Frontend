@@ -6,10 +6,10 @@
             <mat-card-title>
             </mat-card-title>
             <mat-card-content>
-                <form class="example-form">
+                <form class="form"  [formGroup]="taskForm" (ngSubmit)="onSubmit(taskForm.value)">
                     <mat-form-field class="example-full-width">
                       <mat-label>Task Description</mat-label>
-                      <input matInput placeholder="Description" value="{{task.description}}">
+                      <input matInput id="description" formControlName="description" placeholder="Description" value="{{task.description}}">
                     </mat-form-field>
                     <br>
                     <button mat-raised-button color="primary" type="submit">

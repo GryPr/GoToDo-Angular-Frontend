@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Task} from '../task'
-import { Location } from '@angular/common'
+import { Task } from '../task'
 import { TaskService } from '../task.service'
 import { ActivatedRoute } from '@angular/router';
+
+
 
 
 @Component({
@@ -17,7 +18,6 @@ export class TaskEditComponent implements OnInit {
   constructor( 
     private route: ActivatedRoute,
     public TaskService: TaskService,
-    private location: Location
     ) { }
 
   ngOnInit(): void {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Task } from './task';
+import { Task, TaskCreation } from './task';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
@@ -29,8 +29,8 @@ export class RestApiService {
     )
   }
 
-  createTask(task): Observable<Task> {
-    return this.http.post<Task>(this.apiURL + '/todo', JSON.stringify(task), this.httpOptions)
+  createTask(task): Observable<TaskCreation> {
+    return this.http.post<TaskCreation>(this.apiURL + '/todo', JSON.stringify(task), this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.handleError)

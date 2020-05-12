@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Task } from './task'
+import { Task, TaskCreation } from './task';
 import { RestApiService } from './rest-api.service'
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -35,6 +35,10 @@ export class TaskService {
   onDescriptionChange(value: string, task: Task) {
     task.description = value;
     this.RestAPIService.updateTask(task.ID, task).subscribe(t => {task = t});
+  }
+
+  newTask(task: TaskCreation) {
+    this.RestAPIService.createTask(task).subscribe(t=>{task = t});
   }
 
 }
