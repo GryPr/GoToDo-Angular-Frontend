@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TaskCreation } from '../task'
 import { TaskService } from '../task.service'
 import { FormBuilder } from '@angular/forms';
-import {Router} from "@angular/router"
+import {MatSnackBar} from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-task-create',
@@ -21,7 +22,7 @@ export class TaskCreateComponent implements OnInit {
   constructor(
     public TaskService: TaskService,
     private FormBuilder: FormBuilder,
-    private Router: Router,
+    private snackbar: MatSnackBar,
   ) { 
     this.taskForm = this.FormBuilder.group({
       description: '',
@@ -34,7 +35,12 @@ export class TaskCreateComponent implements OnInit {
   onSubmit(taskData) {
     this.task.description = taskData.description;
     this.TaskService.newTask(this.task);
-    this.Router.navigate(['/dashboard']);
+    this.taskForm.reset();
+    this.openSnackbar(this.task.description);
+  }
+
+  openSnackbar(desc){
+    this.snackbar.open("Added task: " + desc, "Close", {duration: 5000})
   }
 
 }
