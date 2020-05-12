@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskCreation } from '../task'
+import { TaskService } from '../task.service'
 
 @Component({
   selector: 'app-task-create',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskCreateComponent implements OnInit {
 
-  constructor() { }
+  task : TaskCreation = {
+    description: "",
+    completion: false,
+  }
+
+  constructor(
+    public TaskService: TaskService,
+  ) { }
 
   ngOnInit(): void {
   }

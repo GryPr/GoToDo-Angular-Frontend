@@ -20,7 +20,6 @@ export class TaskService {
 
   onCompletionChange(isChecked: boolean, task: Task) {
     task.completion = isChecked;
-    console.log(task.completion);
     this.RestAPIService.updateTask(task.ID, task).subscribe(t => {task = t});
   }
 
@@ -35,7 +34,6 @@ export class TaskService {
 
   onDescriptionChange(value: string, task: Task) {
     task.description = value;
-    console.log(task.description);
     this.RestAPIService.updateTask(task.ID, task).subscribe(t => {task = t});
   }
 

@@ -4,3 +4,8 @@ export interface Task {
     completion: boolean;
     node: number;
 }
+
+export interface TaskCreation {
+    description: string;
+    completion: boolean;
+}

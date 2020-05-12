@@ -37,8 +37,8 @@ export class RestApiService {
     )
   }
 
-  updateTask(id, task): Observable<Task> {
-    return this.http.put<Task>(this.apiURL + '/todo/' + id, task, this.httpOptions)
+  updateTask(id, task): Observable<any> {
+    return this.http.put(this.apiURL + '/todo/' + id, task, this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -46,7 +46,6 @@ export class RestApiService {
   }
 
   deleteTask(id){
-    console.log("ID " + id);
     return this.http.delete(this.apiURL + '/todo/' + id, this.httpOptions)
     .pipe(
       retry(1),

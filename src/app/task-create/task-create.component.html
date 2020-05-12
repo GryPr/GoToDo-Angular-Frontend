@@ -1,1 +1,22 @@
-<p>task-create works!</p>
+<mat-card class="mat-elevation-z0">
+        <mat-card-title>
+            <h2>CREATE TASK</h2>
+        </mat-card-title>
+        <mat-card>
+            <mat-card-title>
+            </mat-card-title>
+            <mat-card-content>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Task Description</mat-label>
+                      <input matInput placeholder="Description" value="{{task.description}}">
+                    </mat-form-field>
+                    <br>
+                    <button mat-raised-button color="primary" type="submit">
+                        Create
+                    </button>
+                  </form>
+            </mat-card-content>
+        </mat-card>
+</mat-card>
+

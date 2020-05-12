@@ -11,10 +11,18 @@ export class TasksComponent implements OnInit {
 
   tasks : Task[];
 
-  constructor(private RestAPIService: RestApiService, public TaskService: TaskService) { }
+  constructor(private RestAPIService: RestApiService, private TaskService: TaskService) { }
 
   ngOnInit(): void {
     this.TaskService.getTasks().subscribe(t => {this.tasks = t});
+  }
+
+  changeCompletion(change: boolean, t: Task){
+    this.TaskService.onCompletionChange(change, t);
+  }
+
+  delete(id: number){
+    this.TaskService.deleteTask(id);
   }
 
 }
