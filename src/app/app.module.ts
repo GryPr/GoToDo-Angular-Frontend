@@ -21,6 +21,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -47,6 +49,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatIconModule,
     MatButtonModule,
     MatTooltipModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   exports: [
     MatCheckboxModule,
@@ -59,6 +63,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatIconModule,
     MatButtonModule,
     MatTooltipModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

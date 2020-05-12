@@ -1,10 +1,27 @@
-<mat-card class="mat-elevation-z0">
-    <mat-card-title>
-        <h2>{{task.description}}</h2>
-    </mat-card-title>
-    <mat-card>
+<div *ngIf="task">
+    <mat-card class="mat-elevation-z0">
         <mat-card-title>
             <h2>Edit Task</h2>
         </mat-card-title>
+        <mat-card>
+            <mat-card-title>
+                <h2>{{task.description}}</h2>
+            </mat-card-title>
+            <mat-card-content>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Description</mat-label>
+                      <input matInput placeholder="" (input)="TaskService.onDescriptionChange($event.target.value, task)" value="{{task.description}}">
+                    </mat-form-field>
+                    <br>
+                    <mat-button-toggle-group value={{task.completion}}>
+                        <mat-button-toggle value="true" (change)="TaskService.onCompletionChange(true, task)">Complete</mat-button-toggle>
+                        <mat-button-toggle value="false" (change)="TaskService.onCompletionChange(false, task)">Incomplete</mat-button-toggle>
+                    </mat-button-toggle-group>
+                  </form>
+            </mat-card-content>
+        </mat-card>
     </mat-card>
-</mat-card>
+</div>
+
+

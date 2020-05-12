@@ -38,7 +38,6 @@ export class RestApiService {
   }
 
   updateTask(id, task): Observable<Task> {
-    console.log("ID " + id);
     return this.http.put<Task>(this.apiURL + '/todo/' + id, task, this.httpOptions)
     .pipe(
       retry(1),

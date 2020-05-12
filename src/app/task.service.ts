@@ -33,4 +33,10 @@ export class TaskService {
     window.location.reload();
   }
 
+  onDescriptionChange(value: string, task: Task) {
+    task.description = value;
+    console.log(task.description);
+    this.RestAPIService.updateTask(task.ID, task).subscribe(t => {task = t});
+  }
+
 }

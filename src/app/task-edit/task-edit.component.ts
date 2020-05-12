@@ -16,12 +16,11 @@ export class TaskEditComponent implements OnInit {
 
   constructor( 
     private route: ActivatedRoute,
-    private TaskService: TaskService,
+    public TaskService: TaskService,
     private location: Location
     ) { }
 
   ngOnInit(): void {
     this.TaskService.getTask(+this.route.snapshot.paramMap.get('id')).subscribe(t => {this.task = t})
   }
-
 }
