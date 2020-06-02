@@ -1,17 +1,13 @@
 h1 {
     text-align: center;
 }
-.login-card {
+.signup-card {
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
     offset: 0px 30px;
     height: 1000px;
     width: 500px;
-}
-
-.flex {
-    flex: 1 1 auto;
 }
 
 mat-form-field {

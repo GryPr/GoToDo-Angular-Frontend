@@ -25,8 +25,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule, MatSnackBar} from '@angular/material/snack-bar';
 
-import { OAuthModule } from 'angular-oauth2-oidc';
-import { LoginPageComponent } from './login-page/login-page.component'
+import { LoginPageComponent } from './login-page/login-page.component';
+import { SignupPageComponent } from './signup-page/signup-page.component'
 
 
 @NgModule({
@@ -37,7 +37,8 @@ import { LoginPageComponent } from './login-page/login-page.component'
     TaskEditComponent,
     DashboardComponent,
     TaskOptionBarComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    SignupPageComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +59,6 @@ import { LoginPageComponent } from './login-page/login-page.component'
     MatInputModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    OAuthModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
