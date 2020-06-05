@@ -24,10 +24,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule, MatSnackBar} from '@angular/material/snack-bar';
-
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component'
-
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -60,7 +59,7 @@ import { SignupPageComponent } from './signup-page/signup-page.component'
     ReactiveFormsModule,
     MatSnackBarModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
