@@ -30,7 +30,6 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component'
 import { OAuthModule } from 'angular-oauth2-oidc'
 
-
 @NgModule({
   declarations: [
     AppComponent,
