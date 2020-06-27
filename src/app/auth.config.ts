@@ -5,7 +5,7 @@ export const DiscoveryDocumentConfig = {
 }
 
 export const authConfig: AuthConfig = {
-    redirectUri: window.location.origin + '/index.html',
+    redirectUri: window.location.origin + '/dashboard',
     responseType: 'token id_token',
     issuer: 'https://localgotodo.b2clogin.com/53109908-9db2-4dbd-ab3e-9c40ab19bac9/v2.0/',
     strictDiscoveryDocumentValidation: false,

@@ -1,26 +1,9 @@
 <div class='login-card'>
     <mat-card>
         <mat-card-title>
-            <h1>Log In</h1>
+            <h1>Please log in or sign up before continuing</h1>
         </mat-card-title>
         <mat-card-content>
-            <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
-                <mat-form-field appearance="fill">
-                    <mat-label>Username</mat-label>
-                    <input matInput required>
-                </mat-form-field>
-                <mat-form-field appearance="fill">
-                    <mat-label>Password</mat-label>
-                    <input matInput type="password" required>
-                </mat-form-field>
-                <button mat-button routerLink="/signup">
-                    Create Account
-                </button>
-                <br/>
-                <button mat-raised-button color="primary">
-                    Login
-                </button>
-            </form>
         </mat-card-content>
     </mat-card>
 </div>
